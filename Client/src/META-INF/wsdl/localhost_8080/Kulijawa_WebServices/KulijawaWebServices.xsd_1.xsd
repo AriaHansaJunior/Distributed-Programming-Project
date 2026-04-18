@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://services.kulijawa.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.kulijawa.com/">
+
+<xs:element name="broadcast" type="tns:broadcast"/>
+
+<xs:element name="broadcastResponse" type="tns:broadcastResponse"/>
+
+<xs:element name="checkEmail" type="tns:checkEmail"/>
+
+<xs:element name="checkEmailResponse" type="tns:checkEmailResponse"/>
+
+<xs:element name="checkLogin" type="tns:checkLogin"/>
+
+<xs:element name="checkLoginResponse" type="tns:checkLoginResponse"/>
+
+<xs:element name="deleteUser" type="tns:deleteUser"/>
+
+<xs:element name="deleteUserResponse" type="tns:deleteUserResponse"/>
+
+<xs:element name="registerUser" type="tns:registerUser"/>
+
+<xs:element name="registerUserResponse" type="tns:registerUserResponse"/>
+
+<xs:element name="updateUser" type="tns:updateUser"/>
+
+<xs:element name="updateUserResponse" type="tns:updateUserResponse"/>
+
+<xs:element name="viewNotifications" type="tns:viewNotifications"/>
+
+<xs:element name="viewNotificationsResponse" type="tns:viewNotificationsResponse"/>
+
+<xs:element name="viewPurchases" type="tns:viewPurchases"/>
+
+<xs:element name="viewPurchasesResponse" type="tns:viewPurchasesResponse"/>
+
+<xs:element name="viewUsers" type="tns:viewUsers"/>
+
+<xs:element name="viewUsersResponse" type="tns:viewUsersResponse"/>
+
+<xs:complexType name="updateUser">
+<xs:sequence>
+<xs:element name="fullname" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="role" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerUser">
+<xs:sequence>
+<xs:element name="fullname" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="dob" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUser">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteUserResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkEmail">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkEmailResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkLogin">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viewNotifications">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="request" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viewNotificationsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viewUsers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="viewUsersResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="broadcast">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="broadcastResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="viewPurchases">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="viewPurchasesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
